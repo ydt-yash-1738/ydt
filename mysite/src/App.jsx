@@ -703,15 +703,15 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-center w-full max-w-7xl mx-auto">
           
           {/* Left Section - Main Content */}
-          <div className={`space-y-3 sm:space-y-4 md:space-y-5 text-center lg:text-left ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+          <div className={`space-y-4 sm:space-y-5 md:space-y-6 text-center lg:text-left ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <div className="space-y-2 sm:space-y-3">
               <div className="inline-block">
-                <span className="text-cyan-400 text-xs sm:text-sm md:text-base font-medium tracking-wider">
+                <span className="text-cyan-400 text-sm sm:text-base md:text-lg font-medium tracking-wider">
                   Hello, I'm
                 </span>
               </div>
               
-              <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight ${isVisible ? 'animate-slide-up' : 'opacity-0 translate-y-8'}`}>
+              <h1 className={`text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight ${isVisible ? 'animate-slide-up' : 'opacity-0 translate-y-8'}`}>
                 <span className="bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
                   Yashdev
                 </span>
@@ -719,11 +719,11 @@ const Portfolio = () => {
                 <span className="text-cyan-400">Tiwari</span>
               </h1>
               
-              <div className={`space-y-1 sm:space-y-2 ${isVisible ? 'animate-slide-up delay-300' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-300">
+              <div className={`space-y-2 sm:space-y-3 ${isVisible ? 'animate-slide-up delay-300' : 'opacity-0 translate-y-8'}`}>
+                <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-semibold text-gray-300">
                   MERN Stack Developer
                 </h2>
-                <p className="text-gray-400 text-xs sm:text-sm md:text-base max-w-sm mx-auto lg:mx-0">
+                <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-sm mx-auto lg:mx-0">
                   Crafting full-stack web applications with modern technologies and clean code.
                 </p>
               </div>
@@ -731,20 +731,20 @@ const Portfolio = () => {
 
             {/* Tech Stack */}
             <div className={`${isVisible ? 'animate-slide-up delay-500' : 'opacity-0 translate-y-8'}`}>
-              <h3 className="text-cyan-400 font-semibold mb-2 sm:mb-3 text-xs sm:text-sm md:text-base">Tech Stack</h3>
-              <div className="grid grid-cols-2 gap-2 sm:gap-3 max-w-xs sm:max-w-sm mx-auto lg:mx-0">
+              <h3 className="text-cyan-400 font-semibold mb-3 sm:mb-4 text-base sm:text-lg md:text-xl">Tech Stack</h3>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-sm sm:max-w-md mx-auto lg:mx-0">
                 {techStack.map((tech, index) => {
                   const IconComponent = tech.icon;
                   return (
                     <div
                       key={tech.name}
-                      className="flex items-center space-x-2 p-2 sm:p-3 rounded-lg bg-gray-900/50 border border-gray-800 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 group"
+                      className="flex items-center space-x-3 p-3 sm:p-4 rounded-lg bg-gray-900/50 border border-gray-800 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 group"
                       style={{ animationDelay: `${0.7 + index * 0.1}s` }}
                     >
                       <div className={`${tech.color} group-hover:scale-110 transition-transform`}>
                         <IconComponent />
                       </div>
-                      <span className="text-gray-300 font-medium text-xs sm:text-sm">{tech.name}</span>
+                      <span className="text-gray-300 font-medium text-sm sm:text-base">{tech.name}</span>
                     </div>
                   );
                 })}
@@ -755,27 +755,27 @@ const Portfolio = () => {
             <div className={`${isVisible ? 'animate-slide-up delay-700' : 'opacity-0 translate-y-8'}`}>
               <button
                 onClick={handleContactClick}
-                className="group relative inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-cyan-500 to-cyan-400 text-black font-semibold rounded-lg hover:from-cyan-400 hover:to-cyan-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/30 text-xs sm:text-sm"
+                className="group relative inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-cyan-400 text-black font-semibold rounded-lg hover:from-cyan-400 hover:to-cyan-300 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/30 text-sm sm:text-base"
               >
-                <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-2 group-hover:animate-bounce" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:animate-bounce" />
                 Get In Touch
-                <ExternalLink className="w-3 h-3 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             </div>
 
             {/* Social Links */}
-            <div className={`flex justify-center lg:justify-start space-x-3 sm:space-x-4 ${isVisible ? 'animate-fade-in delay-1000' : 'opacity-0'}`}>
+            <div className={`flex justify-center lg:justify-start space-x-4 sm:space-x-6 ${isVisible ? 'animate-fade-in delay-1000' : 'opacity-0'}`}>
               <button
                 onClick={handleLinkedInClick}
-                className="p-2 rounded-full border border-gray-700 hover:border-cyan-400 text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:bg-cyan-400/10 hover:scale-110"
+                className="p-3 sm:p-4 rounded-full border border-gray-700 hover:border-cyan-400 text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:bg-cyan-400/10 hover:scale-110"
               >
-                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
               <button
                 onClick={handleGithubClick}
-                className="p-2 rounded-full border border-gray-700 hover:border-cyan-400 text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:bg-cyan-400/10 hover:scale-110"
+                className="p-3 sm:p-4 rounded-full border border-gray-700 hover:border-cyan-400 text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:bg-cyan-400/10 hover:scale-110"
               >
-                <Github className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
           </div>
@@ -784,7 +784,7 @@ const Portfolio = () => {
           <div className="flex justify-center items-center order-first lg:order-last">
             <div className={`relative ${isVisible ? 'animate-slide-left delay-500' : 'opacity-0 translate-x-12'}`}>
               {/* Main hexagonal container */}
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 xl:w-72 xl:h-72">
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-64 md:w-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80">
                 {/* Hexagonal background */}
                 <div className="absolute inset-0 transform rotate-0">
                   <div className="w-full h-full border-2 border-cyan-400/30 relative"
