@@ -861,9 +861,20 @@ const Portfolio = () => {
         body, html {
           overflow: hidden;
           height: 100vh;
+          height: 100dvh; /* Dynamic viewport height for modern browsers */
           width: 100vw;
           margin: 0;
           padding: 0;
+          position: fixed; /* Prevents Chrome mobile scrolling */
+          top: 0;
+          left: 0;
+        }
+        
+        /* Chrome mobile specific fix */
+        @supports (-webkit-touch-callout: none) {
+          body, html {
+            height: -webkit-fill-available;
+          }
         }
         
         @keyframes grid-move {
