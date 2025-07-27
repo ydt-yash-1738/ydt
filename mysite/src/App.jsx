@@ -673,7 +673,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="h-screen w-screen bg-black text-white relative overflow-hidden">
+    <div className="h-screen w-screen bg-black text-white relative overflow-hidden chrome-mobile-fix" style={{ minHeight: '100vh', minHeight: '100dvh' }}>
       {/* Animated background grid */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -699,7 +699,7 @@ const Portfolio = () => {
         ))}
       </div>
 
-      <div className="relative z-10 h-full w-full px-3 sm:px-4 lg:px-6 flex items-center">
+      <div className="relative z-10 h-full w-full px-3 sm:px-4 lg:px-6 flex items-center chrome-mobile-fix" style={{ minHeight: '100vh', minHeight: '100dvh' }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-center w-full max-w-7xl mx-auto">
           
           {/* Left Section - Main Content */}
@@ -874,6 +874,19 @@ const Portfolio = () => {
         @supports (-webkit-touch-callout: none) {
           body, html {
             height: -webkit-fill-available;
+          }
+          
+          .chrome-mobile-fix {
+            height: -webkit-fill-available !important;
+            min-height: -webkit-fill-available !important;
+          }
+        }
+        
+        /* Additional Chrome mobile viewport fix */
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+          .chrome-mobile-fix {
+            height: 100vh !important;
+            min-height: 100vh !important;
           }
         }
         
