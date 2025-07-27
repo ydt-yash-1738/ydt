@@ -661,7 +661,7 @@ const Portfolio = () => {
   ];
 
   const handleContactClick = () => {
-    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=yashdt50@gmail.com&body=Body%20Here', '_blank');
+    window.open('mailto:yashdt50@gmail.com?subject=Hello%20Yashdev&body=Hi%20Yashdev,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20with%20you.%0D%0A%0D%0ABest%20regards', '_blank');
   };
 
   const handleLinkedInClick = () => {
