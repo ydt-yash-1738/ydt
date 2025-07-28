@@ -928,14 +928,14 @@ const Portfolio = () => {
         )}
 
         {/* Debug info - remove in production */}
-        {isMobile && (
+        {/* {isMobile && (
           <div className="absolute top-20 left-4 z-50 text-xs text-cyan-400 bg-black/50 p-2 rounded">
             <div>Mobile: {isMobile ? 'Yes' : 'No'}</div>
             <div>Gyro Enabled: {isGyroscopeEnabled ? 'Yes' : 'No'}</div>
             <div>Permission Requested: {permissionRequested ? 'Yes' : 'No'}</div>
             <div>X: {gyroscopeData.x.toFixed(2)}, Y: {gyroscopeData.y.toFixed(2)}</div>
           </div>
-        )}
+        )} */}
 
         {/* Animated background grid */}
         <div className="absolute inset-0 opacity-10">
