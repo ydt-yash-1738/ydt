@@ -71,6 +71,15 @@ const PortfolioStyles = () => {
           transform: translateX(0); 
         }
       }
+
+      @keyframes moveParticle {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-100vh); }
+      }
+
+      .animate-hexPulse {
+        animation: pulse 3s ease-in-out infinite;
+      }
       
       .animate-float {
         animation: float 3s ease-in-out infinite;
