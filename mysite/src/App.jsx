@@ -909,7 +909,7 @@ const Portfolio = () => {
 
   // Calculate transform position
   const transformPosition = isMobile && isGyroscopeEnabled
-    ? { x: gyroscopeData.x * 30, y: gyroscopeData.y * 30 } // Reduced multiplier for subtler effect
+    ? { x: gyroscopeData.x * 60, y: gyroscopeData.y * 60 } // Reduced multiplier for subtler effect
     : !isMobile && window.innerWidth >= 1024
       ? mousePosition
       : { x: 0, y: 0 };
